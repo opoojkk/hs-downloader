@@ -1,0 +1,76 @@
+body {
+    width: 380px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 15px;
+    background-color: #f8f8f8;
+}
+
+.header {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#status {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.bulk-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.btn.primary { background-color: #ff2442; color: white; }
+.btn.primary:hover { background-color: #e61f3b; }
+.btn.secondary { background-color: #fff; color: #ff2442; border: 1px solid #ff2442; }
+.btn.secondary:hover { background-color: #fff5f6; }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.image-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.thumb-box {
+    height: 150px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eee;
+}
+
+.thumb-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.actions {
+    padding: 8px;
+    display: flex;
+    gap: 5px;
+}
+
+.actions .btn { flex: 1; }
+.error { color: red; }

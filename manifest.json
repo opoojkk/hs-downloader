@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "小红书原图提取器",
+  "version": "1.0",
+  "description": "提取小红书笔记详情页的高清原图，支持 WebP 和 PNG 格式下载。",
+  "permissions": [
+    "activeTab",
+    "downloads"
+  ],
+  "host_permissions": [
+    "*://*.xiaohongshu.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "抓取本页图片"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.xiaohongshu.com/explore/*",
+        "*://*.xiaohongshu.com/discovery/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
